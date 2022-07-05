@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import PropTypes from "prop-types";
 
 import Head from "next/head";
 import Link from "next/link";
@@ -15,6 +16,11 @@ function Card({ children, href }) {
     </a>
   );
 }
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
+};
 
 export default function Home() {
   return (
