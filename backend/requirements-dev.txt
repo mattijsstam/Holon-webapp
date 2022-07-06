@@ -1,3 +1,2 @@
 black==22.6.0
-drf-nested-routers==0.93.4
 drf-yasg==1.20.0
