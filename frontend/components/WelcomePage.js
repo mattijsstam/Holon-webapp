@@ -4,6 +4,11 @@ import Link from 'next/link';
 import HolonButton from './Buttons/HolonButton';
 import Image from 'next/image';
 
+import zenmoLogo from '../public/Logos/zenmo_logo.png';
+import tnoLogo from '../public/Logos/tno_logo.png';
+import WBLogo from '../public/Logos/WB_logo.png';
+import quintelLogo from '../public/Logos/quintel_logo.png';
+
 export default function WelcomePage() {
     return (
         <div className="flex-col items-start">
@@ -24,10 +29,10 @@ export default function WelcomePage() {
                 </div>
             </div>
             <div className="mx-24 my-16 h-11 flex justify-between">
-                <Image alt="Logo Zenmo" src="/Logos/zenmo_logo.png" ></Image>
-                <Image alt="Logo TNO" src="/Logos/tno_logo.png" ></Image>
-                <Image alt="Logo Witteveen+Bos" src="/Logos/WB_logo.png" ></Image>
-                <Image alt="Logo Quintel" src="/Logos/quintel_logo.png" ></Image>
+                <Image alt="Logo Zenmo" src={zenmoLogo} ></Image>
+                <Image alt="Logo TNO" src={tnoLogo} ></Image>
+                <Image alt="Logo Witteveen+Bos" src={WBLogo} ></Image>
+                <Image alt="Logo Quintel" src={quintelLogo} ></Image>
             </div>
         </div>
     )
