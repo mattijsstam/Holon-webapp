@@ -1,15 +1,19 @@
 {
   "extends": [
-    "next/core-web-vitals", 
+    "next/core-web-vitals",
     "plugin:react/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
-        "jsx": true
+      "jsx": true
     },
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"],
-  "rules": {}
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }
