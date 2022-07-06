@@ -21,6 +21,7 @@ function SubmitButton({ status, ...buttonProps }) {
 
   return (
     <HolonButton
+      variant="darkmode"
       className="flex h-12 items-center justify-center text-lg"
       disabled={status === "pending" || status === "success"}
     >
