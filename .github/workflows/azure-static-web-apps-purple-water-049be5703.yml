@@ -32,7 +32,7 @@ jobs:
           output_location: "out" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env: 
-          NEXT_PUBLIC_BACKEND_URL: https://purple-water-049be5703.1.azurestaticapps.net/
+          NEXT_PUBLIC_BACKEND_URL: secrets.NEXT_PUBLIC_BACKEND_URL
           
 
   close_pull_request_job:
