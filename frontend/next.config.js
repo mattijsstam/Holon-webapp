@@ -4,7 +4,7 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     loader: 'imgix',
-    path: '/'
+    path: 'https://purple-water-049be5703.1.azurestaticapps.net/'
   }
 };
 

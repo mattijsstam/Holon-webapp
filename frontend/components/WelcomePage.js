@@ -4,10 +4,10 @@ import Link from 'next/link';
 import HolonButton from './Buttons/HolonButton';
 import Image from 'next/image';
 
-import zenmoLogo from '../public/Logos/zenmo_logo.png';
-import tnoLogo from '../public/Logos/tno_logo.png';
-import WBLogo from '../public/Logos/WB_logo.png';
-import quintelLogo from '../public/Logos/quintel_logo.png';
+import zenmoLogo from '../public/media/zenmo_logo.png';
+import tnoLogo from '../public/media/tno_logo.png';
+import WBLogo from '../public/media/WB_logo.png';
+import quintelLogo from '../public/media/quintel_logo.png';
 
 export default function WelcomePage() {
     return (
