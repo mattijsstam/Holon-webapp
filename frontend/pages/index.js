@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-import IntroductionVideo from "../components/Introductionvideo";
+import IntroductionVideo from "../components/IntroductionVideo";
 import HolonStyle from "./holon-style";
 import TextBlock from "../components/TextBlock";
 import WelcomePage from "../components/WelcomePage";
