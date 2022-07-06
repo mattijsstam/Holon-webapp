@@ -46,14 +46,14 @@ export default function Sentiment() {
         localStorage.setItem("holon_sentiment_id", json.id);
       })
       .then(() => setChoice(selected))
-      .catch(() => {});
+      .catch(() => { });
   };
 
   return (
     <RadioGroup
       value={choice}
       onChange={onChange}
-      className="flex w-full justify-center gap-6 pt-12 pb-24"
+      className="flex w-full justify-center gap-6 pt-12 pb-24 relative"
     >
       <RadioGroup.Label className="sr-only">What did you think?</RadioGroup.Label>
       <RadioGroup.Option value="heart">
