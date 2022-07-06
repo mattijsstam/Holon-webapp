@@ -8,6 +8,8 @@ CORS_ALLOWED_ORIGINS = (
     ["https://" + os.environ["WEBSITE_HOSTNAME"]] if "WEBSITE_HOSTNAME" in os.environ else []
 )
 
+DEBUG = True
+
 # WhiteNoise configuration
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
