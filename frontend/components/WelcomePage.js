@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import HolonButton from './Buttons/HolonButton';
+import Image from 'next/image';
 
 export default function WelcomePage() {
     return (
@@ -19,18 +20,15 @@ export default function WelcomePage() {
                 <div className="m-8 w-1/3">
                     <h2 className="text-6xl underline decoration-holon-slated-blue-300 decoration-[16px] underline-offset-8">Russisch gas</h2>
                     <p className="my-8 w-4/5">We willen snel een alternatief voor aardgas uit Rusland. Welke mogelijkheden zijn er binnen Europa en wat is de rol van Nederland?</p>
-                    <a href="https://holon-gas.netlify.app/" target="_blank"><HolonButton variant="darkblue">Naar de tool</HolonButton></a>
+                    <a href="https://holon-gas.netlify.app/" target="_blank" rel="noreferrer"><HolonButton variant="darkblue">Naar de tool</HolonButton></a>
                 </div>
             </div>
             <div className="mx-24 my-16 h-11 flex justify-between">
-                <img alt="Logo Zenmo" src="/Logos/zenmo_logo.png" ></img>
-                <img alt="Logo TNO" src="/Logos/tno_logo.png" ></img>
-                <img alt="Logo Witteveen+Bos" src="/Logos/WB_logo.png" ></img>
-                <img alt="Logo Quintel" src="/Logos/quintel_logo.png" ></img>
+                <Image alt="Logo Zenmo" src="/Logos/zenmo_logo.png" ></Image>
+                <Image alt="Logo TNO" src="/Logos/tno_logo.png" ></Image>
+                <Image alt="Logo Witteveen+Bos" src="/Logos/WB_logo.png" ></Image>
+                <Image alt="Logo Quintel" src="/Logos/quintel_logo.png" ></Image>
             </div>
         </div>
-
-
-
     )
 }
