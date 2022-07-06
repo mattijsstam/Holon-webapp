@@ -10,14 +10,14 @@ on:
       - main
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: backend
+
 jobs:
   build:
     runs-on: ubuntu-latest
     
-    defaults:
-      run:
-        working-directory: backend
-
     steps:
       - uses: actions/checkout@v2
 
