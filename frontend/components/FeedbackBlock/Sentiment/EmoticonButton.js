@@ -1,11 +1,12 @@
 import React, { createContext, useContext } from "react";
+import PropTypes from "prop-types";
 
 const variants = {
   heart: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 122.88 107.39"
-      className="ml-auto mr-auto mt-1 h-14 w-14 fill-holon-slated-blue-300 group-hover:fill-white group-focus:fill-white"
+      className="ml-auto mr-auto mt-1 h-14 w-14"
       fill="currentColor"
     >
       <title>red-heart</title>
@@ -18,7 +19,8 @@ const variants = {
       x="0px"
       y="0px"
       viewBox="0 0 122.88 106.16"
-      className="ml-auto mr-auto mt-2 h-14 w-14 fill-holon-slated-blue-300 group-hover:fill-white group-focus:fill-white"
+      className="ml-auto mr-auto mt-2 h-14 w-14"
+      fill="currentColor"
     >
       <g>
         <path
@@ -34,7 +36,8 @@ const variants = {
       x="0px"
       y="0px"
       viewBox="0 0 122.88 106.16"
-      className="ml-auto mr-auto mb-3 h-14 w-14 fill-holon-slated-blue-300 group-hover:fill-white group-focus:fill-white"
+      className="ml-auto mr-auto mb-3 h-14 w-14"
+      fill="currentColor"
     >
       <g>
         <path
@@ -49,13 +52,14 @@ const variants = {
       xmlns="http://www.w3.org/2000/svg"
       x="0"
       y="0"
-      className="ml-auto mr-auto mb-3 h-14 w-14 fill-holon-slated-blue-300 stroke-holon-slated-blue-300 group-hover:fill-white group-hover:stroke-white group-focus:fill-white group-focus:stroke-white"
+      className="ml-auto mr-auto mb-1 h-14 w-14"
+      fill="currentColor"
     >
       <g>
         <title>Layer 1</title>
         <g id="svg_10">
           <line
-            stroke="current"
+            stroke="currentColor"
             strokeWidth="6"
             strokeLinecap="undefined"
             strokeLinejoin="undefined"
@@ -66,8 +70,8 @@ const variants = {
             x1="8"
             fill="none"
           />
-          <ellipse ry="8" rx="8" id="svg_9" cy="19" cx="42" fill="current" />
-          <ellipse ry="8" rx="8" id="svg_9" cy="19" cx="15" fill="current" />
+          <ellipse ry="8" rx="8" id="svg_9" cy="19" cx="42" />
+          <ellipse ry="8" rx="8" id="svg_9" cy="19" cx="15" />
         </g>
       </g>
     </svg>
@@ -76,18 +80,28 @@ const variants = {
 
 const ButtonContext = createContext();
 
-export default function EmoticonButton({ children, variant = "thumbsdown", ...rest }) {
+export default function EmoticonButton({ children, checked, variant = "thumbsdown", ...rest }) {
   const svg = variants[variant] || variants.heart;
+  const colors = checked
+    ? "text-gray-100 border-gray-100 bg-holon-blue-500"
+    : "text-holon-slated-blue-300 border-holon-slated-blue-300";
+
   return (
     <button
-      className="group aspect-square h-20 w-20 rounded-full border-2 border-holon-slated-blue-300 hover:border-white focus:border-white"
       {...rest}
+      className={`aspect-square h-20 w-20 rounded-full border-2 transition hover:border-white hover:text-white focus:border-white focus:text-white ${colors}`}
     >
       {svg}
       <ButtonContext.Provider value={variant}>{children}</ButtonContext.Provider>
     </button>
   );
 }
+
+EmoticonButton.propTypes = {
+  children: PropTypes.node,
+  checked: PropTypes.bool,
+  variant: PropTypes.oneOf(Object.keys(variants)),
+};
 
 /**
  * Hook which provides access to the button variant.
